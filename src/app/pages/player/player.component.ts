@@ -38,9 +38,6 @@ export class PlayerComponent {
   playStream(url) {
     this.audioService.playStream(url).subscribe(events => {
 
-    }, error => {
-      console.log(error);
-      alert("cannot play this")
     });
   }
 
@@ -75,7 +72,6 @@ export class PlayerComponent {
   }
 
   onSliderChangeEnd(change) {
-    console.log(change);
     this.audioService.seekTo(change.value)
   }
 }
